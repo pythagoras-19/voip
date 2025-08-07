@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoIP Learning Platform - Master Voice over IP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-phone-alt"></i>
+                <span>VoIP Academy</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#courses" class="nav-link">Courses</a></li>
+                <li><a href="#simulator" class="nav-link">Simulator</a></li>
+                <li><a href="#quiz" class="nav-link">Quiz</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
+                <li><a href="#progress" class="nav-link">Progress</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Master Voice over IP</h1>
+                <p>Learn everything about VoIP technology, protocols, and implementation through interactive courses, hands-on simulations, and real-world scenarios.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('courses')">Start Learning</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('simulator')">Try Simulator</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="voip-animation">
+                    <div class="phone-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="data-packet">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <div class="server-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2>Learning Path</h2>
+            <div class="course-grid">
+                <div class="course-card" data-course="fundamentals">
+                    <div class="course-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>VoIP Fundamentals</h3>
+                    <p>Learn the basics of Voice over IP technology, including analog vs digital signals, sampling, and encoding.</p>
+                    <div class="course-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="startCourse('fundamentals')">Start Course</button>
+                </div>
+
+                <div class="course-card" data-course="protocols">
+                    <div class="course-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>VoIP Protocols</h3>
+                    <p>Master SIP, RTP, H.323, and other essential protocols used in VoIP communications.</p>
+                    <div class="course-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="startCourse('protocols')">Start Course</button>
+                </div>
+
+                <div class="course-card" data-course="networking">
+                    <div class="course-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Network Infrastructure</h3>
+                    <p>Understand QoS, bandwidth management, and network optimization for VoIP deployment.</p>
+                    <div class="course-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="startCourse('networking')">Start Course</button>
+                </div>
+
+                <div class="course-card" data-course="security">
+                    <div class="course-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>VoIP Security</h3>
+                    <p>Learn about encryption, authentication, and security best practices for VoIP systems.</p>
+                    <div class="course-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="startCourse('security')">Start Course</button>
+                </div>
+
+                <div class="course-card" data-course="deployment">
+                    <div class="course-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>System Deployment</h3>
+                    <p>Plan, design, and implement VoIP solutions for businesses of all sizes.</p>
+                    <div class="course-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="startCourse('deployment')">Start Course</button>
+                </div>
+
+                <div class="course-card" data-course="troubleshooting">
+                    <div class="course-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Troubleshooting</h3>
+                    <p>Master diagnostic tools and techniques for resolving common VoIP issues.</p>
+                    <div class="course-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="startCourse('troubleshooting')">Start Course</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Simulator Section -->
+    <section id="simulator" class="simulator">
+        <div class="container">
+            <h2>VoIP Network Simulator</h2>
+            <p>Experience real VoIP scenarios with our interactive simulator</p>
+            
+            <div class="simulator-container">
+                <div class="simulator-controls">
+                    <div class="control-group">
+                        <label>Call Quality:</label>
+                        <select id="callQuality">
+                            <option value="excellent">Excellent</option>
+                            <option value="good">Good</option>
+                            <option value="poor">Poor</option>
+                            <option value="very-poor">Very Poor</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>Network Load:</label>
+                        <input type="range" id="networkLoad" min="0" max="100" value="20">
+                        <span id="networkLoadValue">20%</span>
+                    </div>
+                    <div class="control-group">
+                        <label>Packet Loss:</label>
+                        <input type="range" id="packetLoss" min="0" max="10" value="0" step="0.1">
+                        <span id="packetLossValue">0%</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="startSimulation()">Start Call Simulation</button>
+                </div>
+                
+                <div class="simulator-visual">
+                    <div class="network-diagram">
+                        <div class="phone-a">
+                            <i class="fas fa-phone"></i>
+                            <span>Phone A</span>
+                        </div>
+                        <div class="connection-line">
+                            <div class="packet" id="packet1"></div>
+                            <div class="packet" id="packet2"></div>
+                            <div class="packet" id="packet3"></div>
+                        </div>
+                        <div class="server">
+                            <i class="fas fa-server"></i>
+                            <span>VoIP Server</span>
+                        </div>
+                        <div class="connection-line">
+                            <div class="packet" id="packet4"></div>
+                            <div class="packet" id="packet5"></div>
+                            <div class="packet" id="packet6"></div>
+                        </div>
+                        <div class="phone-b">
+                            <i class="fas fa-phone"></i>
+                            <span>Phone B</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="simulation-results">
+                    <h3>Call Analysis</h3>
+                    <div class="metrics">
+                        <div class="metric">
+                            <span class="metric-label">MOS Score:</span>
+                            <span class="metric-value" id="mosScore">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Latency:</span>
+                            <span class="metric-value" id="latency">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Jitter:</span>
+                            <span class="metric-value" id="jitter">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Packet Loss:</span>
+                            <span class="metric-value" id="packetLossResult">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="quiz">
+        <div class="container">
+            <h2>Knowledge Assessment</h2>
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h3 id="quizQuestion">What is VoIP?</h3>
+                    <div class="quiz-progress">
+                        <span id="currentQuestion">1</span> of <span id="totalQuestions">10</span>
+                    </div>
+                </div>
+                
+                <div class="quiz-options" id="quizOptions">
+                    <!-- Options will be populated by JavaScript -->
+                </div>
+                
+                <div class="quiz-controls">
+                    <button class="btn btn-secondary" onclick="previousQuestion()" id="prevBtn" disabled>Previous</button>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">Next</button>
+                </div>
+                
+                <div class="quiz-results" id="quizResults" style="display: none;">
+                    <h3>Quiz Results</h3>
+                    <div class="score-display">
+                        <span id="scoreText">You scored 8/10</span>
+                        <div class="score-bar">
+                            <div class="score-fill" id="scoreFill"></div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="restartQuiz()">Take Quiz Again</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <h2>Learning Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>VoIP Glossary</h3>
+                    <p>Comprehensive dictionary of VoIP terms and concepts</p>
+                    <button class="btn btn-outline" onclick="openGlossary()">View Glossary</button>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Tutorials</h3>
+                    <p>Step-by-step video guides for practical implementation</p>
+                    <button class="btn btn-outline" onclick="openTutorials()">Watch Videos</button>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>White Papers</h3>
+                    <p>In-depth technical documents and research papers</p>
+                    <button class="btn btn-outline" onclick="openWhitePapers()">Download PDFs</button>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Forum</h3>
+                    <p>Connect with other VoIP professionals and enthusiasts</p>
+                    <button class="btn btn-outline" onclick="openForum()">Join Discussion</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Tracking Section -->
+    <section id="progress" class="progress">
+        <div class="container">
+            <h2>Your Learning Progress</h2>
+            <div class="progress-overview">
+                <div class="progress-card">
+                    <h3>Overall Progress</h3>
+                    <div class="progress-circle">
+                        <svg width="120" height="120">
+                            <circle cx="60" cy="60" r="50" fill="none" stroke="#e0e0e0" stroke-width="8"/>
+                            <circle cx="60" cy="60" r="50" fill="none" stroke="#4CAF50" stroke-width="8" 
+                                    stroke-dasharray="314" stroke-dashoffset="251" id="progressCircle"/>
+                        </svg>
+                        <div class="progress-text">
+                            <span id="overallProgress">20%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="progress-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="coursesCompleted">1</span>
+                        <span class="stat-label">Courses Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="hoursLearned">5</span>
+                        <span class="stat-label">Hours Learned</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="quizScore">85</span>
+                        <span class="stat-label">Average Quiz Score</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="achievements">
+                <h3>Achievements</h3>
+                <div class="achievement-grid">
+                    <div class="achievement" data-achieved="true">
+                        <i class="fas fa-star"></i>
+                        <span>First Steps</span>
+                    </div>
+                    <div class="achievement" data-achieved="false">
+                        <i class="fas fa-certificate"></i>
+                        <span>Protocol Master</span>
+                    </div>
+                    <div class="achievement" data-achieved="false">
+                        <i class="fas fa-trophy"></i>
+                        <span>Security Expert</span>
+                    </div>
+                    <div class="achievement" data-achieved="false">
+                        <i class="fas fa-medal"></i>
+                        <span>VoIP Professional</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>VoIP Academy</h3>
+                    <p>Your comprehensive platform for learning Voice over IP technology</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#simulator">Simulator</a></li>
+                        <li><a href="#quiz">Quiz</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@voipacademy.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 VoIP Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Course Modal -->
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="courseContent">
+                <!-- Course content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

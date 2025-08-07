@@ -1,0 +1,42 @@
+{
+  "name": "voip-learning-platform",
+  "version": "1.0.0",
+  "description": "A comprehensive, interactive learning platform for mastering Voice over IP (VoIP) technology",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "build": "echo 'No build process required for static site'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "voip",
+    "learning",
+    "education",
+    "interactive",
+    "simulator",
+    "quiz",
+    "courses",
+    "web-platform"
+  ],
+  "author": "VoIP Academy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/voipacademy/voip-learning-platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/voipacademy/voip-learning-platform/issues"
+  },
+  "homepage": "https://voipacademy.com",
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
