@@ -22,6 +22,7 @@
                 <li><a href="#simulator" class="nav-link">Simulator</a></li>
                 <li><a href="#quiz" class="nav-link">Quiz</a></li>
                 <li><a href="#resources" class="nav-link">Resources</a></li>
+                <li><a href="#definitions" class="nav-link">Definitions</a></li>
                 <li><a href="#progress" class="nav-link">Progress</a></li>
             </ul>
             <div class="hamburger">
@@ -313,6 +314,219 @@
                     <h3>Community Forum</h3>
                     <p>Connect with other VoIP professionals and enthusiasts</p>
                     <button class="btn btn-outline" onclick="openForum()">Join Discussion</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Definitions Section -->
+    <section id="definitions" class="definitions">
+        <div class="container">
+            <h2>VoIP Glossary</h2>
+            <p class="section-subtitle">Comprehensive alphabetical reference of Voice over IP terms and concepts</p>
+            
+            <div class="definitions-container">
+                
+                <div class="definitions-content">
+                    <div class="definition-item" data-term="analog">
+                        <h3>Analog</h3>
+                        <p>A continuous signal that represents physical measurements. In traditional telephony, voice is transmitted as analog signals, while VoIP converts analog voice to digital packets for transmission over IP networks.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="bandwidth">
+                        <h3>Bandwidth</h3>
+                        <p>The maximum rate of data transfer across a given path, measured in bits per second (bps). In VoIP, sufficient bandwidth is crucial for maintaining call quality and supporting multiple concurrent calls. Each VoIP call typically requires 64-128 kbps depending on the codec used.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="call admission control">
+                        <h3>Call Admission Control (CAC)</h3>
+                        <p>A mechanism that determines whether a new call can be established based on available network resources. CAC prevents network overload by monitoring bandwidth, latency, and other quality metrics before allowing new calls.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="codec">
+                        <h3>Codec</h3>
+                        <p>A device or program that compresses and decompresses digital audio data. In VoIP, codecs convert analog voice signals to digital format for transmission and back to analog for playback. Common codecs include G.711, G.729, and Opus.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="digital">
+                        <h3>Digital</h3>
+                        <p>Representation of data using discrete values (0s and 1s). VoIP converts analog voice signals into digital format for transmission over IP networks, enabling more efficient storage, processing, and transmission.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="echo cancellation">
+                        <h3>Echo Cancellation</h3>
+                        <p>A technique used to eliminate acoustic echo in voice communications. Echo cancellers detect and remove reflected audio signals that can cause feedback and degrade call quality in VoIP systems.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="firewall">
+                        <h3>Firewall</h3>
+                        <p>A network security device that monitors and controls incoming and outgoing network traffic. VoIP-aware firewalls are configured to allow SIP signaling (port 5060) and RTP media traffic while blocking unauthorized access.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="gateway">
+                        <h3>Gateway</h3>
+                        <p>A device that converts between different types of networks or protocols. In VoIP, gateways often convert between IP networks and traditional PSTN networks, enabling communication between VoIP and traditional phone systems.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="h.323">
+                        <h3>H.323</h3>
+                        <p>An ITU-T standard for multimedia communications over packet networks. One of the first VoIP standards, H.323 defines protocols for audio, video, and data communications. Still used in some legacy systems and video conferencing applications.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="ip address">
+                        <h3>IP Address</h3>
+                        <p>A numerical label assigned to devices on a computer network. VoIP devices use IP addresses for routing calls and establishing connections. Both IPv4 and IPv6 addresses are supported in modern VoIP systems.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="jitter">
+                        <h3>Jitter</h3>
+                        <p>Variation in the time between packets arriving, caused by network congestion, timing drift, or route changes. Jitter buffers are used to smooth out these variations and maintain consistent audio playback in VoIP applications.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="latency">
+                        <h3>Latency</h3>
+                        <p>The time it takes for a packet to travel from source to destination, measured in milliseconds (ms). In VoIP, low latency (under 150ms) is essential for natural conversation flow. High latency can cause delays and echo.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="mgcp">
+                        <h3>MGCP (Media Gateway Control Protocol)</h3>
+                        <p>A protocol used for controlling media gateways from external call control elements called media gateway controllers. MGCP is commonly used in VoIP deployments where centralized call control is desired, separating call control from media handling.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="mos">
+                        <h3>MOS (Mean Opinion Score)</h3>
+                        <p>A subjective quality rating scale from 1 to 5, where 5 represents excellent quality. MOS is used to measure perceived voice quality in VoIP systems through human testing. Automated tools like PESQ and POLQA predict MOS scores.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="nat">
+                        <h3>NAT (Network Address Translation)</h3>
+                        <p>A method of remapping one IP address space into another by modifying network address information in IP packet headers. NAT can cause issues with VoIP traffic by hiding internal IP addresses, requiring protocols like STUN and TURN for traversal.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="packet">
+                        <h3>Packet</h3>
+                        <p>A formatted unit of data carried by a packet-switched network. In VoIP, voice data is broken into small packets for transmission over IP networks. Each packet contains audio data, headers with routing information, and sequence numbers for reassembly.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="packet loss">
+                        <h3>Packet Loss</h3>
+                        <p>The failure of one or more transmitted packets to arrive at their destination. In VoIP, packet loss can cause audio dropouts, clicks, and degraded call quality. Acceptable packet loss is typically under 1% for good voice quality.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="pbx">
+                        <h3>PBX (Private Branch Exchange)</h3>
+                        <p>A telephone system within an enterprise that switches calls between users on local lines while allowing all users to share a certain number of external phone lines. Modern PBX systems are IP-based and offer advanced features like voicemail and call forwarding.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="pesq">
+                        <h3>PESQ (Perceptual Evaluation of Speech Quality)</h3>
+                        <p>An objective method for evaluating speech quality that predicts MOS scores. PESQ compares the original signal with the received signal to assess quality degradation. Used for automated quality assessment in VoIP systems and network testing.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="poe">
+                        <h3>PoE (Power over Ethernet)</h3>
+                        <p>A technology that allows electrical power to be transmitted along with data over Ethernet cables. PoE is commonly used to power IP phones and other network devices, eliminating the need for separate power supplies and reducing installation costs.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="polqa">
+                        <h3>POLQA (Perceptual Objective Listening Quality Assessment)</h3>
+                        <p>A modern standard for objective voice quality measurement that can handle wideband and super-wideband audio. POLQA is the successor to PESQ and provides more accurate quality assessment for modern VoIP systems with HD voice capabilities.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="protocol">
+                        <h3>Protocol</h3>
+                        <p>A set of rules that define how devices communicate over a network. VoIP uses multiple protocols including SIP for signaling, RTP for media transport, and various security protocols like SRTP for encrypted communications.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="qos">
+                        <h3>QoS (Quality of Service)</h3>
+                        <p>A set of technologies that work on a network to guarantee its ability to dependably run high-priority applications and traffic under limited network capacity. QoS is essential for maintaining voice quality in VoIP deployments by prioritizing voice traffic over data.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="r-factor">
+                        <h3>R-Factor</h3>
+                        <p>A voice quality metric that combines various network impairments into a single score ranging from 0 to 100. R-Factor considers factors like delay, echo, and noise to provide an overall quality rating. Higher scores indicate better quality.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="rtcp">
+                        <h3>RTCP (RTP Control Protocol)</h3>
+                        <p>A companion protocol to RTP that provides feedback on the quality of data distribution and carries information about participants in a session. RTCP is used for monitoring and controlling RTP sessions, providing statistics on packet loss, jitter, and round-trip delay.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="rtp">
+                        <h3>RTP (Real-time Transport Protocol)</h3>
+                        <p>A network protocol for delivering audio and video over IP networks. RTP provides end-to-end delivery services for data with real-time characteristics, including sequence numbers and timestamps for synchronization. RTP is the standard protocol for VoIP media transport.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="sampling">
+                        <h3>Sampling</h3>
+                        <p>The process of converting a continuous analog signal into discrete digital values at regular intervals. In VoIP, audio is typically sampled at 8,000 times per second (8 kHz) for narrowband or 16,000 times per second (16 kHz) for wideband audio.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="sampling rate">
+                        <h3>Sampling Rate</h3>
+                        <p>The number of samples of audio carried per second, measured in Hz. Common sampling rates include 8 kHz (narrowband) and 16 kHz (wideband) for VoIP applications. Higher sampling rates provide better audio quality but require more bandwidth.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="sdp">
+                        <h3>SDP (Session Description Protocol)</h3>
+                        <p>A protocol for describing multimedia communication sessions. SDP is used in VoIP to negotiate media parameters like codec type, IP addresses, and port numbers between calling parties. SDP messages are typically carried within SIP messages.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="sip">
+                        <h3>SIP (Session Initiation Protocol)</h3>
+                        <p>A signaling protocol used for initiating, maintaining, and terminating real-time sessions including voice, video, and messaging applications. SIP is the most widely used protocol for VoIP call setup and control, operating at the application layer of the OSI model.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="sips">
+                        <h3>SIPS (SIP over TLS)</h3>
+                        <p>Encrypted SIP signaling using Transport Layer Security. SIPS provides secure call setup and control messages, typically using port 5061 instead of the standard port 5060. SIPS ensures that signaling messages cannot be intercepted or modified.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="softphone">
+                        <h3>Softphone</h3>
+                        <p>A software application that provides telephone functionality on a computer or mobile device. Softphones use the device's microphone and speakers instead of dedicated hardware, allowing VoIP calls to be made from any device with internet connectivity.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="srtp">
+                        <h3>SRTP (Secure Real-time Transport Protocol)</h3>
+                        <p>An encrypted version of RTP that provides confidentiality, message authentication, and replay protection for voice and video communications. SRTP uses AES encryption and HMAC-SHA1 for authentication, ensuring secure media transmission in VoIP systems.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="stun">
+                        <h3>STUN (Session Traversal Utilities for NAT)</h3>
+                        <p>A protocol that allows clients behind NAT to discover their public IP address and the type of NAT they are behind. STUN is used for establishing VoIP connections when devices are behind firewalls or NAT devices, enabling peer-to-peer communication.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="toll fraud">
+                        <h3>Toll Fraud</h3>
+                        <p>Unauthorized use of a VoIP system to make expensive calls, often to premium rate numbers. Toll fraud is a common security threat in VoIP deployments that can result in significant financial losses. Prevention includes strong authentication and call restrictions.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="turn">
+                        <h3>TURN (Traversal Using Relays around NAT)</h3>
+                        <p>A protocol that allows clients behind NAT to communicate with peers by relaying data through a server. TURN is used when direct peer-to-peer connection is not possible due to NAT restrictions, providing a fallback mechanism for VoIP communication.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="vlan">
+                        <h3>VLAN (Virtual Local Area Network)</h3>
+                        <p>A logical grouping of network devices that appear to be on the same network despite being physically distributed. VLANs are used in VoIP to separate voice traffic from data traffic, improving security and allowing for different QoS policies for voice and data.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="voip">
+                        <h3>VoIP (Voice over Internet Protocol)</h3>
+                        <p>A technology that allows voice calls to be made over IP networks instead of traditional circuit-switched networks. VoIP converts analog voice signals into digital packets for transmission over the internet, enabling cost-effective and feature-rich communication solutions.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="wideband">
+                        <h3>Wideband</h3>
+                        <p>Audio with a frequency range of 50 Hz to 7 kHz, providing superior voice quality compared to narrowband audio. Wideband codecs like G.722 and Opus offer more natural-sounding voice communication in VoIP systems, often referred to as HD voice.</p>
+                    </div>
+                    
+                    <div class="definition-item" data-term="zrtp">
+                        <h3>ZRTP (Zimmermann Real-time Transport Protocol)</h3>
+                        <p>An end-to-end encryption protocol for RTP that provides perfect forward secrecy. ZRTP uses Diffie-Hellman key exchange without requiring PKI infrastructure, making it suitable for secure peer-to-peer VoIP communications. ZRTP is used in applications like Signal and some VoIP clients.</p>
+                    </div>
                 </div>
             </div>
         </div>

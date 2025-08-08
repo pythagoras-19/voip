@@ -1613,6 +1613,8 @@ function openForum() {
     alert('Community forum would open here for discussions and Q&A.');
 }
 
+
+
 // Modal functionality
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('courseModal');
