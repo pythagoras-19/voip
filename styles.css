@@ -251,6 +251,10 @@ body {
     box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 
+.course-card:hover .progress-text {
+    display: none;
+}
+
 .course-icon {
     font-size: 2.5rem;
     color: #667eea;
@@ -289,8 +293,7 @@ body {
 }
 
 .progress-text {
-    font-size: 0.9rem;
-    color: #666;
+    display: none;
 }
 
 /* Simulator Section */
