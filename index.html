@@ -43,6 +43,24 @@
     <style>
       /* Optional: make long diagrams horizontally scrollable on small screens */
       .mermaid { overflow-x: auto; }
+      
+      /* Make Mermaid diagram captions gold colored */
+      .mermaid text {
+        fill: #ffd700 !important;
+      }
+      
+      .mermaid .label {
+        color: #ffd700 !important;
+        fill: #ffd700 !important;
+      }
+      
+      .mermaid .actor {
+        fill: #ffd700 !important;
+      }
+      
+      .mermaid .messageText {
+        fill: #ffd700 !important;
+      }
     </style>
 </head>
 <body>
@@ -228,7 +246,7 @@
     <section id="sip-flow" class="sip-flow">
         <div class="container">
             <h2>SIP Call Flow Diagram</h2>
-            <p class="section-subtitle">Visual representation of a complete SIP call establishment and teardown process</p>
+            <p class="section-subtitle" style="color: #ffd700;">Visual representation of a complete SIP call establishment and teardown process</p>
             
             <div class="diagram-container">
                 <div class="mermaid" id="sip-diagram">
