@@ -54,13 +54,13 @@
                 <span>VoIP Academy</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#courses" class="nav-link">Courses</a></li>
-                <li><a href="#simulator" class="nav-link">Simulator</a></li>
-                <li><a href="#quiz" class="nav-link">Quiz</a></li>
-                <li><a href="#resources" class="nav-link">Resources</a></li>
-                <li><a href="#definitions" class="nav-link">Definitions</a></li>
-                <li><a href="#progress" class="nav-link">Progress</a></li>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="simulator.html" class="nav-link">Simulator</a></li>
+                <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="definitions.html" class="nav-link">Definitions</a></li>
+                <li><a href="progress.html" class="nav-link">Progress</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -77,8 +77,8 @@
                 <h1>Master Voice over IP</h1>
                 <p>Learn everything about VoIP technology, protocols, and implementation through interactive courses, hands-on simulations, and real-world scenarios.</p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="scrollToSection('courses')">Start Learning</button>
-                    <button class="btn btn-secondary" onclick="scrollToSection('simulator')">Try Simulator</button>
+                    <a href="courses.html" class="btn btn-primary">Start Learning</a>
+                    <a href="simulator.html" class="btn btn-secondary">Try Simulator</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -97,472 +97,127 @@
         </div>
     </section>
 
-    <!-- Courses Section -->
-    <section id="courses" class="courses">
+    <!-- VoIP History Section -->
+    <section id="history" class="history">
         <div class="container">
-            <h2>Learning Path</h2>
-            <div class="course-grid">
-                <div class="course-card" data-course="fundamentals">
-                    <div class="course-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>VoIP Fundamentals</h3>
-                    <p>Learn the basics of Voice over IP technology, including analog vs digital signals, sampling, and encoding.</p>
-                    <div class="course-progress">
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%"></div>
-                        </div>
-                        <span class="progress-text">0% Complete</span>
-                    </div>
-                    <button class="btn btn-outline" onclick="startCourse('fundamentals')">Start Course</button>
-                </div>
-
-                <div class="course-card" data-course="protocols">
-                    <div class="course-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>VoIP Protocols</h3>
-                    <p>Master SIP, RTP, H.323, and other essential protocols used in VoIP communications.</p>
-                    <div class="course-progress">
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%"></div>
-                        </div>
-                        <span class="progress-text">0% Complete</span>
-                    </div>
-                    <button class="btn btn-outline" onclick="startCourse('protocols')">Start Course</button>
-                </div>
-
-                <div class="course-card" data-course="networking">
-                    <div class="course-icon">
-                        <i class="fas fa-wifi"></i>
-                    </div>
-                    <h3>Network Infrastructure</h3>
-                    <p>Understand QoS, bandwidth management, and network optimization for VoIP deployment.</p>
-                    <div class="course-progress">
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%"></div>
-                        </div>
-                        <span class="progress-text">0% Complete</span>
-                    </div>
-                    <button class="btn btn-outline" onclick="startCourse('networking')">Start Course</button>
-                </div>
-
-                <div class="course-card" data-course="security">
-                    <div class="course-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>VoIP Security</h3>
-                    <p>Learn about encryption, authentication, and security best practices for VoIP systems.</p>
-                    <div class="course-progress">
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%"></div>
-                        </div>
-                        <span class="progress-text">0% Complete</span>
-                    </div>
-                    <button class="btn btn-outline" onclick="startCourse('security')">Start Course</button>
-                </div>
-
-                <div class="course-card" data-course="deployment">
-                    <div class="course-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>System Deployment</h3>
-                    <p>Plan, design, and implement VoIP solutions for businesses of all sizes.</p>
-                    <div class="course-progress">
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%"></div>
-                        </div>
-                        <span class="progress-text">0% Complete</span>
-                    </div>
-                    <button class="btn btn-outline" onclick="startCourse('deployment')">Start Course</button>
-                </div>
-
-                <div class="course-card" data-course="troubleshooting">
-                    <div class="course-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Troubleshooting</h3>
-                    <p>Master diagnostic tools and techniques for resolving common VoIP issues.</p>
-                    <div class="course-progress">
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%"></div>
-                        </div>
-                        <span class="progress-text">0% Complete</span>
-                    </div>
-                    <button class="btn btn-outline" onclick="startCourse('troubleshooting')">Start Course</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Simulator Section -->
-    <section id="simulator" class="simulator">
-        <div class="container">
-            <h2>VoIP Network Simulator</h2>
-            <p>Experience real VoIP scenarios with our interactive simulator</p>
+            <h2>The Evolution of VoIP</h2>
+            <p class="section-subtitle">From traditional telephony to modern IP communications</p>
             
-            <div class="simulator-container">
-                <div class="simulator-controls">
-                    <div class="control-group">
-                        <label>Call Quality:</label>
-                        <select id="callQuality">
-                            <option value="excellent">Excellent</option>
-                            <option value="good">Good</option>
-                            <option value="poor">Poor</option>
-                            <option value="very-poor">Very Poor</option>
-                        </select>
-                    </div>
-                    <div class="control-group">
-                        <label>Network Load:</label>
-                        <input type="range" id="networkLoad" min="0" max="100" value="20">
-                        <span id="networkLoadValue">20%</span>
-                    </div>
-                    <div class="control-group">
-                        <label>Packet Loss:</label>
-                        <input type="range" id="packetLoss" min="0" max="10" value="0" step="0.1">
-                        <span id="packetLossValue">0%</span>
-                    </div>
-                    <button class="btn btn-primary" onclick="startSimulation()">Start Call Simulation</button>
-                </div>
-                
-                <div class="simulator-visual">
-                    <div class="network-diagram">
-                        <div class="phone-a">
-                            <i class="fas fa-phone"></i>
-                            <span>Phone A</span>
-                        </div>
-                        <div class="connection-line">
-                            <div class="packet" id="packet1"></div>
-                            <div class="packet" id="packet2"></div>
-                            <div class="packet" id="packet3"></div>
-                        </div>
-                        <div class="server">
-                            <i class="fas fa-server"></i>
-                            <span>VoIP Server</span>
-                        </div>
-                        <div class="connection-line">
-                            <div class="packet" id="packet4"></div>
-                            <div class="packet" id="packet5"></div>
-                            <div class="packet" id="packet6"></div>
-                        </div>
-                        <div class="phone-b">
-                            <i class="fas fa-phone"></i>
-                            <span>Phone B</span>
-                        </div>
+            <div class="history-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">1876</div>
+                    <div class="timeline-content">
+                        <h3>Alexander Graham Bell's Telephone</h3>
+                        <p>The invention of the telephone marked the beginning of voice communication technology. Traditional circuit-switched networks dominated for over a century.</p>
                     </div>
                 </div>
                 
-                <div class="simulation-results">
-                    <h3>Call Analysis</h3>
-                    <div class="metrics">
-                        <div class="metric">
-                            <span class="metric-label">MOS Score:</span>
-                            <span class="metric-value" id="mosScore">-</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-label">Latency:</span>
-                            <span class="metric-value" id="latency">-</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-label">Jitter:</span>
-                            <span class="metric-value" id="jitter">-</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-label">Packet Loss:</span>
-                            <span class="metric-value" id="packetLossResult">-</span>
-                        </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1995</div>
+                    <div class="timeline-content">
+                        <h3>First VoIP Applications</h3>
+                        <p>VocalTec's InternetPhone became the first commercial VoIP application, allowing users to make voice calls over the internet using their computers.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">1996</div>
+                    <div class="timeline-content">
+                        <h3>H.323 Standard</h3>
+                        <p>The ITU-T introduced H.323, the first comprehensive standard for multimedia communications over packet networks, establishing the foundation for VoIP protocols.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">1999</div>
+                    <div class="timeline-content">
+                        <h3>SIP Protocol Emerges</h3>
+                        <p>The Session Initiation Protocol (SIP) was standardized by the IETF, providing a more flexible and scalable approach to VoIP signaling than H.323.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2003</div>
+                    <div class="timeline-content">
+                        <h3>Skype Revolution</h3>
+                        <p>Skype launched, bringing VoIP to mainstream consumers with free peer-to-peer voice calls and instant messaging, revolutionizing personal communication.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2010</div>
+                    <div class="timeline-content">
+                        <h3>Mobile VoIP Era</h3>
+                        <p>The rise of smartphones and mobile apps like WhatsApp, Viber, and FaceTime brought VoIP to mobile devices, enabling voice and video calls over cellular and Wi-Fi networks.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h3>Remote Work Revolution</h3>
+                        <p>The COVID-19 pandemic accelerated VoIP adoption as businesses worldwide transitioned to remote work, relying heavily on VoIP platforms like Zoom, Microsoft Teams, and Cisco Webex.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Today</div>
+                    <div class="timeline-content">
+                        <h3>Modern VoIP Landscape</h3>
+                        <p>VoIP has become the standard for business communications, offering advanced features like HD voice, video conferencing, unified communications, and seamless integration with cloud services.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Quiz Section -->
-    <section id="quiz" class="quiz">
-        <div class="container">
-            <h2>Knowledge Assessment</h2>
-            <div class="quiz-container">
-                <div class="quiz-header">
-                    <h3 id="quizQuestion">What is VoIP?</h3>
-                    <div class="quiz-progress">
-                        <span id="currentQuestion">1</span> of <span id="totalQuestions">10</span>
-                    </div>
-                </div>
-                
-                <div class="quiz-options" id="quizOptions">
-                    <!-- Options will be populated by JavaScript -->
-                </div>
-                
-                <div class="quiz-controls">
-                    <button class="btn btn-secondary" onclick="previousQuestion()" id="prevBtn" disabled>Previous</button>
-                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">Next</button>
-                </div>
-                
-                <div class="quiz-results" id="quizResults" style="display: none;">
-                    <h3>Quiz Results</h3>
-                    <div class="score-display">
-                        <span id="scoreText">You scored 8/10</span>
-                        <div class="score-bar">
-                            <div class="score-fill" id="scoreFill"></div>
-                        </div>
-                    </div>
-                    <button class="btn btn-primary" onclick="restartQuiz()">Take Quiz Again</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resources Section -->
-    <section id="resources" class="resources">
-        <div class="container">
-            <h2>Learning Resources</h2>
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <h3>VoIP Glossary</h3>
-                    <p>Comprehensive dictionary of VoIP terms and concepts</p>
-                    <button class="btn btn-outline" onclick="openGlossary()">View Glossary</button>
-                </div>
-                
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3>Video Tutorials</h3>
-                    <p>Step-by-step video guides for practical implementation</p>
-                    <button class="btn btn-outline" onclick="openTutorials()">Watch Videos</button>
-                </div>
-                
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <i class="fas fa-file-pdf"></i>
-                    </div>
-                    <h3>White Papers</h3>
-                    <p>In-depth technical documents and research papers</p>
-                    <button class="btn btn-outline" onclick="openWhitePapers()">Download PDFs</button>
-                </div>
-                
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Community Forum</h3>
-                    <p>Connect with other VoIP professionals and enthusiasts</p>
-                    <button class="btn btn-outline" onclick="openForum()">Join Discussion</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Definitions Section -->
-    <section id="definitions" class="definitions">
-        <div class="container">
-            <h2>VoIP Glossary</h2>
-            <p class="section-subtitle">Comprehensive alphabetical reference of Voice over IP terms and concepts</p>
             
-            <div class="definitions-container">
-                
-                <div class="definitions-content">
-                    <div class="definition-item" data-term="analog">
-                        <h3>Analog</h3>
-                        <p>A continuous signal that represents physical measurements. In traditional telephony, voice is transmitted as analog signals, while VoIP converts analog voice to digital packets for transmission over IP networks.</p>
+            <div class="why-voip">
+                <h3>Why VoIP Matters Today</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h4>Cost Efficiency</h4>
+                        <p>Eliminates expensive long-distance charges and reduces infrastructure costs by leveraging existing IP networks. Businesses can save 30-50% on communication expenses.</p>
                     </div>
                     
-                    <div class="definition-item" data-term="bandwidth">
-                        <h3>Bandwidth</h3>
-                        <p>The maximum rate of data transfer across a given path, measured in bits per second (bps). In VoIP, sufficient bandwidth is crucial for maintaining call quality and supporting multiple concurrent calls. Each VoIP call typically requires 64-128 kbps depending on the codec used.</p>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4>Global Connectivity</h4>
+                        <p>Enables seamless communication across borders without traditional telephony restrictions. Remote teams can collaborate as if they're in the same office.</p>
                     </div>
                     
-                    <div class="definition-item" data-term="call admission control">
-                        <h3>Call Admission Control (CAC)</h3>
-                        <p>A mechanism that determines whether a new call can be established based on available network resources. CAC prevents network overload by monitoring bandwidth, latency, and other quality metrics before allowing new calls.</p>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>Advanced Features</h4>
+                        <p>Provides rich features like call forwarding, voicemail-to-email, video conferencing, and integration with CRM systems that traditional phones cannot offer.</p>
                     </div>
                     
-                    <div class="definition-item" data-term="codec">
-                        <h3>Codec</h3>
-                        <p>A device or program that compresses and decompresses digital audio data. In VoIP, codecs convert analog voice signals to digital format for transmission and back to analog for playback. Common codecs include G.711, G.729, and Opus.</p>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Enhanced Security</h4>
+                        <p>Modern VoIP systems offer encryption, authentication, and secure protocols that protect against eavesdropping and fraud, making them more secure than traditional phone lines.</p>
                     </div>
                     
-                    <div class="definition-item" data-term="digital">
-                        <h3>Digital</h3>
-                        <p>Representation of data using discrete values (0s and 1s). VoIP converts analog voice signals into digital format for transmission over IP networks, enabling more efficient storage, processing, and transmission.</p>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Scalability</h4>
+                        <p>Easily scales from small businesses to large enterprises without requiring extensive infrastructure changes. Add or remove users with minimal effort.</p>
                     </div>
                     
-                    <div class="definition-item" data-term="echo cancellation">
-                        <h3>Echo Cancellation</h3>
-                        <p>A technique used to eliminate acoustic echo in voice communications. Echo cancellers detect and remove reflected audio signals that can cause feedback and degrade call quality in VoIP systems.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="firewall">
-                        <h3>Firewall</h3>
-                        <p>A network security device that monitors and controls incoming and outgoing network traffic. VoIP-aware firewalls are configured to allow SIP signaling (port 5060) and RTP media traffic while blocking unauthorized access.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="gateway">
-                        <h3>Gateway</h3>
-                        <p>A device that converts between different types of networks or protocols. In VoIP, gateways often convert between IP networks and traditional PSTN networks, enabling communication between VoIP and traditional phone systems.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="h.323">
-                        <h3>H.323</h3>
-                        <p>An ITU-T standard for multimedia communications over packet networks. One of the first VoIP standards, H.323 defines protocols for audio, video, and data communications. Still used in some legacy systems and video conferencing applications.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="ip address">
-                        <h3>IP Address</h3>
-                        <p>A numerical label assigned to devices on a computer network. VoIP devices use IP addresses for routing calls and establishing connections. Both IPv4 and IPv6 addresses are supported in modern VoIP systems.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="jitter">
-                        <h3>Jitter</h3>
-                        <p>Variation in the time between packets arriving, caused by network congestion, timing drift, or route changes. Jitter buffers are used to smooth out these variations and maintain consistent audio playback in VoIP applications.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="latency">
-                        <h3>Latency</h3>
-                        <p>The time it takes for a packet to travel from source to destination, measured in milliseconds (ms). In VoIP, low latency (under 150ms) is essential for natural conversation flow. High latency can cause delays and echo.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="mgcp">
-                        <h3>MGCP (Media Gateway Control Protocol)</h3>
-                        <p>A protocol used for controlling media gateways from external call control elements called media gateway controllers. MGCP is commonly used in VoIP deployments where centralized call control is desired, separating call control from media handling.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="mos">
-                        <h3>MOS (Mean Opinion Score)</h3>
-                        <p>A subjective quality rating scale from 1 to 5, where 5 represents excellent quality. MOS is used to measure perceived voice quality in VoIP systems through human testing. Automated tools like PESQ and POLQA predict MOS scores.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="nat">
-                        <h3>NAT (Network Address Translation)</h3>
-                        <p>A method of remapping one IP address space into another by modifying network address information in IP packet headers. NAT can cause issues with VoIP traffic by hiding internal IP addresses, requiring protocols like STUN and TURN for traversal.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="packet">
-                        <h3>Packet</h3>
-                        <p>A formatted unit of data carried by a packet-switched network. In VoIP, voice data is broken into small packets for transmission over IP networks. Each packet contains audio data, headers with routing information, and sequence numbers for reassembly.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="packet loss">
-                        <h3>Packet Loss</h3>
-                        <p>The failure of one or more transmitted packets to arrive at their destination. In VoIP, packet loss can cause audio dropouts, clicks, and degraded call quality. Acceptable packet loss is typically under 1% for good voice quality.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="pbx">
-                        <h3>PBX (Private Branch Exchange)</h3>
-                        <p>A telephone system within an enterprise that switches calls between users on local lines while allowing all users to share a certain number of external phone lines. Modern PBX systems are IP-based and offer advanced features like voicemail and call forwarding.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="pesq">
-                        <h3>PESQ (Perceptual Evaluation of Speech Quality)</h3>
-                        <p>An objective method for evaluating speech quality that predicts MOS scores. PESQ compares the original signal with the received signal to assess quality degradation. Used for automated quality assessment in VoIP systems and network testing.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="poe">
-                        <h3>PoE (Power over Ethernet)</h3>
-                        <p>A technology that allows electrical power to be transmitted along with data over Ethernet cables. PoE is commonly used to power IP phones and other network devices, eliminating the need for separate power supplies and reducing installation costs.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="polqa">
-                        <h3>POLQA (Perceptual Objective Listening Quality Assessment)</h3>
-                        <p>A modern standard for objective voice quality measurement that can handle wideband and super-wideband audio. POLQA is the successor to PESQ and provides more accurate quality assessment for modern VoIP systems with HD voice capabilities.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="protocol">
-                        <h3>Protocol</h3>
-                        <p>A set of rules that define how devices communicate over a network. VoIP uses multiple protocols including SIP for signaling, RTP for media transport, and various security protocols like SRTP for encrypted communications.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="qos">
-                        <h3>QoS (Quality of Service)</h3>
-                        <p>A set of technologies that work on a network to guarantee its ability to dependably run high-priority applications and traffic under limited network capacity. QoS is essential for maintaining voice quality in VoIP deployments by prioritizing voice traffic over data.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="r-factor">
-                        <h3>R-Factor</h3>
-                        <p>A voice quality metric that combines various network impairments into a single score ranging from 0 to 100. R-Factor considers factors like delay, echo, and noise to provide an overall quality rating. Higher scores indicate better quality.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="rtcp">
-                        <h3>RTCP (RTP Control Protocol)</h3>
-                        <p>A companion protocol to RTP that provides feedback on the quality of data distribution and carries information about participants in a session. RTCP is used for monitoring and controlling RTP sessions, providing statistics on packet loss, jitter, and round-trip delay.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="rtp">
-                        <h3>RTP (Real-time Transport Protocol)</h3>
-                        <p>A network protocol for delivering audio and video over IP networks. RTP provides end-to-end delivery services for data with real-time characteristics, including sequence numbers and timestamps for synchronization. RTP is the standard protocol for VoIP media transport.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="sampling">
-                        <h3>Sampling</h3>
-                        <p>The process of converting a continuous analog signal into discrete digital values at regular intervals. In VoIP, audio is typically sampled at 8,000 times per second (8 kHz) for narrowband or 16,000 times per second (16 kHz) for wideband audio.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="sampling rate">
-                        <h3>Sampling Rate</h3>
-                        <p>The number of samples of audio carried per second, measured in Hz. Common sampling rates include 8 kHz (narrowband) and 16 kHz (wideband) for VoIP applications. Higher sampling rates provide better audio quality but require more bandwidth.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="sdp">
-                        <h3>SDP (Session Description Protocol)</h3>
-                        <p>A protocol for describing multimedia communication sessions. SDP is used in VoIP to negotiate media parameters like codec type, IP addresses, and port numbers between calling parties. SDP messages are typically carried within SIP messages.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="sip">
-                        <h3>SIP (Session Initiation Protocol)</h3>
-                        <p>A signaling protocol used for initiating, maintaining, and terminating real-time sessions including voice, video, and messaging applications. SIP is the most widely used protocol for VoIP call setup and control, operating at the application layer of the OSI model.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="sips">
-                        <h3>SIPS (SIP over TLS)</h3>
-                        <p>Encrypted SIP signaling using Transport Layer Security. SIPS provides secure call setup and control messages, typically using port 5061 instead of the standard port 5060. SIPS ensures that signaling messages cannot be intercepted or modified.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="softphone">
-                        <h3>Softphone</h3>
-                        <p>A software application that provides telephone functionality on a computer or mobile device. Softphones use the device's microphone and speakers instead of dedicated hardware, allowing VoIP calls to be made from any device with internet connectivity.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="srtp">
-                        <h3>SRTP (Secure Real-time Transport Protocol)</h3>
-                        <p>An encrypted version of RTP that provides confidentiality, message authentication, and replay protection for voice and video communications. SRTP uses AES encryption and HMAC-SHA1 for authentication, ensuring secure media transmission in VoIP systems.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="stun">
-                        <h3>STUN (Session Traversal Utilities for NAT)</h3>
-                        <p>A protocol that allows clients behind NAT to discover their public IP address and the type of NAT they are behind. STUN is used for establishing VoIP connections when devices are behind firewalls or NAT devices, enabling peer-to-peer communication.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="toll fraud">
-                        <h3>Toll Fraud</h3>
-                        <p>Unauthorized use of a VoIP system to make expensive calls, often to premium rate numbers. Toll fraud is a common security threat in VoIP deployments that can result in significant financial losses. Prevention includes strong authentication and call restrictions.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="turn">
-                        <h3>TURN (Traversal Using Relays around NAT)</h3>
-                        <p>A protocol that allows clients behind NAT to communicate with peers by relaying data through a server. TURN is used when direct peer-to-peer connection is not possible due to NAT restrictions, providing a fallback mechanism for VoIP communication.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="vlan">
-                        <h3>VLAN (Virtual Local Area Network)</h3>
-                        <p>A logical grouping of network devices that appear to be on the same network despite being physically distributed. VLANs are used in VoIP to separate voice traffic from data traffic, improving security and allowing for different QoS policies for voice and data.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="voip">
-                        <h3>VoIP (Voice over Internet Protocol)</h3>
-                        <p>A technology that allows voice calls to be made over IP networks instead of traditional circuit-switched networks. VoIP converts analog voice signals into digital packets for transmission over the internet, enabling cost-effective and feature-rich communication solutions.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="wideband">
-                        <h3>Wideband</h3>
-                        <p>Audio with a frequency range of 50 Hz to 7 kHz, providing superior voice quality compared to narrowband audio. Wideband codecs like G.722 and Opus offer more natural-sounding voice communication in VoIP systems, often referred to as HD voice.</p>
-                    </div>
-                    
-                    <div class="definition-item" data-term="zrtp">
-                        <h3>ZRTP (Zimmermann Real-time Transport Protocol)</h3>
-                        <p>An end-to-end encryption protocol for RTP that provides perfect forward secrecy. ZRTP uses Diffie-Hellman key exchange without requiring PKI infrastructure, making it suitable for secure peer-to-peer VoIP communications. ZRTP is used in applications like Signal and some VoIP clients.</p>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h4>Cloud Integration</h4>
+                        <p>Seamlessly integrates with cloud services, enabling unified communications that combine voice, video, messaging, and collaboration tools in one platform.</p>
                     </div>
                 </div>
             </div>
@@ -618,65 +273,6 @@ sequenceDiagram
         </div>
     </section>
 
-    <!-- Progress Tracking Section -->
-    <section id="progress" class="progress">
-        <div class="container">
-            <h2>Your Learning Progress</h2>
-            <div class="progress-overview">
-                <div class="progress-card">
-                    <h3>Overall Progress</h3>
-                    <div class="progress-circle">
-                        <svg width="120" height="120">
-                            <circle cx="60" cy="60" r="50" fill="none" stroke="#e0e0e0" stroke-width="8"/>
-                            <circle cx="60" cy="60" r="50" fill="none" stroke="#4CAF50" stroke-width="8" 
-                                    stroke-dasharray="314" stroke-dashoffset="251" id="progressCircle"/>
-                        </svg>
-                        <div class="progress-text">
-                            <span id="overallProgress">20%</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="progress-stats">
-                    <div class="stat-item">
-                        <span class="stat-number" id="coursesCompleted">1</span>
-                        <span class="stat-label">Courses Completed</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" id="hoursLearned">5</span>
-                        <span class="stat-label">Hours Learned</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" id="quizScore">85</span>
-                        <span class="stat-label">Average Quiz Score</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="achievements">
-                <h3>Achievements</h3>
-                <div class="achievement-grid">
-                    <div class="achievement" data-achieved="true">
-                        <i class="fas fa-star"></i>
-                        <span>First Steps</span>
-                    </div>
-                    <div class="achievement" data-achieved="false">
-                        <i class="fas fa-certificate"></i>
-                        <span>Protocol Master</span>
-                    </div>
-                    <div class="achievement" data-achieved="false">
-                        <i class="fas fa-trophy"></i>
-                        <span>Security Expert</span>
-                    </div>
-                    <div class="achievement" data-achieved="false">
-                        <i class="fas fa-medal"></i>
-                        <span>VoIP Professional</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -688,10 +284,10 @@ sequenceDiagram
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#courses">Courses</a></li>
-                        <li><a href="#simulator">Simulator</a></li>
-                        <li><a href="#quiz">Quiz</a></li>
-                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="simulator.html">Simulator</a></li>
+                        <li><a href="quiz.html">Quiz</a></li>
+                        <li><a href="resources.html">Resources</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -705,16 +301,6 @@ sequenceDiagram
             </div>
         </div>
     </footer>
-
-    <!-- Course Modal -->
-    <div id="courseModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="courseContent">
-                <!-- Course content will be loaded here -->
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>

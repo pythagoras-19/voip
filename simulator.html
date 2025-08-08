@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoIP Simulator - Master Voice over IP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-phone-alt"></i>
+                <span>VoIP Academy</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="simulator.html" class="nav-link active">Simulator</a></li>
+                <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="definitions.html" class="nav-link">Definitions</a></li>
+                <li><a href="progress.html" class="nav-link">Progress</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Interactive Simulator Section -->
+    <section class="simulator">
+        <div class="container">
+            <h2>VoIP Network Simulator</h2>
+            <p>Experience real VoIP scenarios with our interactive simulator</p>
+            
+            <div class="simulator-container">
+                <div class="simulator-controls">
+                    <div class="control-group">
+                        <label>Call Quality:</label>
+                        <select id="callQuality">
+                            <option value="excellent">Excellent</option>
+                            <option value="good">Good</option>
+                            <option value="poor">Poor</option>
+                            <option value="very-poor">Very Poor</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>Network Load:</label>
+                        <input type="range" id="networkLoad" min="0" max="100" value="20">
+                        <span id="networkLoadValue">20%</span>
+                    </div>
+                    <div class="control-group">
+                        <label>Packet Loss:</label>
+                        <input type="range" id="packetLoss" min="0" max="10" value="0" step="0.1">
+                        <span id="packetLossValue">0%</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="startSimulation()">Start Call Simulation</button>
+                </div>
+                
+                <div class="simulator-visual">
+                    <div class="network-diagram">
+                        <div class="phone-a">
+                            <i class="fas fa-phone"></i>
+                            <span>Phone A</span>
+                        </div>
+                        <div class="connection-line">
+                            <div class="packet" id="packet1"></div>
+                            <div class="packet" id="packet2"></div>
+                            <div class="packet" id="packet3"></div>
+                        </div>
+                        <div class="server">
+                            <i class="fas fa-server"></i>
+                            <span>VoIP Server</span>
+                        </div>
+                        <div class="connection-line">
+                            <div class="packet" id="packet4"></div>
+                            <div class="packet" id="packet5"></div>
+                            <div class="packet" id="packet6"></div>
+                        </div>
+                        <div class="phone-b">
+                            <i class="fas fa-phone"></i>
+                            <span>Phone B</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="simulation-results">
+                    <h3>Call Analysis</h3>
+                    <div class="metrics">
+                        <div class="metric">
+                            <span class="metric-label">MOS Score:</span>
+                            <span class="metric-value" id="mosScore">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Latency:</span>
+                            <span class="metric-value" id="latency">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Jitter:</span>
+                            <span class="metric-value" id="jitter">-</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Packet Loss:</span>
+                            <span class="metric-value" id="packetLossResult">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

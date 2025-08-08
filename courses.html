@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoIP Courses - Master Voice over IP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-phone-alt"></i>
+                <span>VoIP Academy</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="courses.html" class="nav-link active">Courses</a></li>
+                <li><a href="simulator.html" class="nav-link">Simulator</a></li>
+                <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="definitions.html" class="nav-link">Definitions</a></li>
+                <li><a href="progress.html" class="nav-link">Progress</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Courses Section -->
+    <section class="courses">
+        <div class="container">
+            <h2>Learning Path</h2>
+            <div class="course-grid">
+                <div class="course-card" data-course="fundamentals">
+                    <div class="course-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>VoIP Fundamentals</h3>
+                    <p>Learn the basics of Voice over IP technology, including analog vs digital signals, sampling, and encoding.</p>
+                    <div class="course-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="startCourse('fundamentals')">Start Course</button>
+                </div>
+
+                <div class="course-card" data-course="protocols">
+                    <div class="course-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>VoIP Protocols</h3>
+                    <p>Master SIP, RTP, H.323, and other essential protocols used in VoIP communications.</p>
+                    <div class="course-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="startCourse('protocols')">Start Course</button>
+                </div>
+
+                <div class="course-card" data-course="networking">
+                    <div class="course-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Network Infrastructure</h3>
+                    <p>Understand QoS, bandwidth management, and network optimization for VoIP deployment.</p>
+                    <div class="course-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="startCourse('networking')">Start Course</button>
+                </div>
+
+                <div class="course-card" data-course="security">
+                    <div class="course-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>VoIP Security</h3>
+                    <p>Learn about encryption, authentication, and security best practices for VoIP systems.</p>
+                    <div class="course-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="startCourse('security')">Start Course</button>
+                </div>
+
+                <div class="course-card" data-course="deployment">
+                    <div class="course-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>System Deployment</h3>
+                    <p>Plan, design, and implement VoIP solutions for businesses of all sizes.</p>
+                    <div class="course-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="startCourse('deployment')">Start Course</button>
+                </div>
+
+                <div class="course-card" data-course="troubleshooting">
+                    <div class="course-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Troubleshooting</h3>
+                    <p>Master diagnostic tools and techniques for resolving common VoIP issues.</p>
+                    <div class="course-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% Complete</span>
+                    </div>
+                    <button class="btn btn-outline" onclick="startCourse('troubleshooting')">Start Course</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Modal -->
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="courseContent">
+                <!-- Course content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

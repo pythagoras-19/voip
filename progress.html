@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoIP Progress - Master Voice over IP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-phone-alt"></i>
+                <span>VoIP Academy</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="simulator.html" class="nav-link">Simulator</a></li>
+                <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+                <li><a href="resources.html" class="nav-link">Resources</a></li>
+                <li><a href="definitions.html" class="nav-link">Definitions</a></li>
+                <li><a href="progress.html" class="nav-link active">Progress</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Progress Tracking Section -->
+    <section class="progress">
+        <div class="container">
+            <h2>Your Learning Progress</h2>
+            <div class="progress-overview">
+                <div class="progress-card">
+                    <h3>Overall Progress</h3>
+                    <div class="progress-circle">
+                        <svg width="120" height="120">
+                            <circle cx="60" cy="60" r="50" fill="none" stroke="#e0e0e0" stroke-width="8"/>
+                            <circle cx="60" cy="60" r="50" fill="none" stroke="#4CAF50" stroke-width="8" 
+                                    stroke-dasharray="314" stroke-dashoffset="251" id="progressCircle"/>
+                        </svg>
+                        <div class="progress-text">
+                            <span id="overallProgress">20%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="progress-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="coursesCompleted">1</span>
+                        <span class="stat-label">Courses Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="hoursLearned">5</span>
+                        <span class="stat-label">Hours Learned</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="quizScore">85</span>
+                        <span class="stat-label">Average Quiz Score</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="achievements">
+                <h3>Achievements</h3>
+                <div class="achievement-grid">
+                    <div class="achievement" data-achieved="true">
+                        <i class="fas fa-star"></i>
+                        <span>First Steps</span>
+                    </div>
+                    <div class="achievement" data-achieved="false">
+                        <i class="fas fa-certificate"></i>
+                        <span>Protocol Master</span>
+                    </div>
+                    <div class="achievement" data-achieved="false">
+                        <i class="fas fa-trophy"></i>
+                        <span>Security Expert</span>
+                    </div>
+                    <div class="achievement" data-achieved="false">
+                        <i class="fas fa-medal"></i>
+                        <span>VoIP Professional</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
