@@ -7,6 +7,43 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Mermaid JS (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+      mermaid.initialize({
+        startOnLoad: false,
+        securityLevel: "loose",
+        theme: "default"
+      });
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(() => {
+          if (typeof mermaid !== 'undefined') {
+            const mermaidElements = document.querySelectorAll('.mermaid');
+            
+            mermaidElements.forEach((element, index) => {
+              const diagramText = element.textContent.trim();
+              
+              if (diagramText && diagramText.startsWith('sequenceDiagram')) {
+                element.innerHTML = '';
+                
+                mermaid.render('mermaid-svg-' + index, diagramText).then(({svg}) => {
+                  element.innerHTML = svg;
+                }).catch(error => {
+                  element.innerHTML = '<div style="color: red; padding: 20px;">Error rendering diagram</div>';
+                });
+              }
+            });
+          }
+        }, 2000);
+      });
+    </script>
+    
+    <style>
+      /* Optional: make long diagrams horizontally scrollable on small screens */
+      .mermaid { overflow-x: auto; }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -528,6 +565,55 @@
                         <p>An end-to-end encryption protocol for RTP that provides perfect forward secrecy. ZRTP uses Diffie-Hellman key exchange without requiring PKI infrastructure, making it suitable for secure peer-to-peer VoIP communications. ZRTP is used in applications like Signal and some VoIP clients.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIP Call Flow Diagram Section -->
+    <section id="sip-flow" class="sip-flow">
+        <div class="container">
+            <h2>SIP Call Flow Diagram</h2>
+            <p class="section-subtitle">Visual representation of a complete SIP call establishment and teardown process</p>
+            
+            <div class="diagram-container">
+                <div class="mermaid" id="sip-diagram">
+sequenceDiagram
+    participant A as Caller
+    participant P as SIP Proxy
+    participant B as Callee
+
+    A->>P: REGISTER
+    P-->>A: 200 OK
+    A->>P: INVITE
+    P->>B: INVITE
+    B-->>P: 100 Trying
+    P-->>A: 100 Trying
+    B-->>P: 180 Ringing
+    P-->>A: 180 Ringing
+    B-->>P: 200 OK
+    P-->>A: 200 OK
+    A->>P: ACK
+    P->>B: ACK
+    A->>P: BYE
+    P->>B: BYE
+    B-->>P: 200 OK
+    P-->>A: 200 OK
+                </div>
+            </div>
+            
+            <div class="diagram-explanation">
+                <h3>Key Components Explained:</h3>
+                <ul>
+                    <li><strong>Registration:</strong> User agents register their location with the SIP server</li>
+                    <li><strong>INVITE:</strong> Initiates the call with SDP offer containing media parameters</li>
+                    <li><strong>100 Trying:</strong> Provisional response indicating the request is being processed</li>
+                    <li><strong>180 Ringing:</strong> Indicates the callee's phone is ringing</li>
+                    <li><strong>183 Session Progress:</strong> Optional early media for announcements or IVR</li>
+                    <li><strong>200 OK:</strong> Call accepted with SDP answer containing media parameters</li>
+                    <li><strong>ACK:</strong> Confirms the call establishment</li>
+                    <li><strong>Media Stream:</strong> RTP/SRTP packets carry the actual voice data</li>
+                    <li><strong>BYE:</strong> Terminates the call session</li>
+                </ul>
             </div>
         </div>
     </section>

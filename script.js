@@ -1615,6 +1615,8 @@ function openForum() {
 
 
 
+
+
 // Modal functionality
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('courseModal');

@@ -660,6 +660,65 @@ body {
     margin: 0;
 }
 
+/* SIP Call Flow Diagram Section */
+.sip-flow {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.sip-flow h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.diagram-container {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.diagram-explanation {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.diagram-explanation h3 {
+    color: #667eea;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.diagram-explanation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.diagram-explanation li {
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.diagram-explanation li:before {
+    content: "•";
+    color: #667eea;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.diagram-explanation strong {
+    color: #333;
+}
+
 /* Progress Section */
 .progress {
     padding: 80px 0;
