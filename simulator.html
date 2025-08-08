@@ -37,7 +37,71 @@
     <section class="simulator">
         <div class="container">
             <h2>VoIP Network Simulator</h2>
-            <p>Experience real VoIP scenarios with our interactive simulator</p>
+            <p class="section-subtitle">Experience real VoIP scenarios and understand how network conditions affect call quality</p>
+            
+            <!-- Instructions Section -->
+            <div class="simulator-instructions">
+                <h3>How to Use the Simulator</h3>
+                <div class="instructions-grid">
+                    <div class="instruction-card">
+                        <div class="instruction-icon">
+                            <i class="fas fa-sliders-h"></i>
+                        </div>
+                        <h4>1. Adjust Network Parameters</h4>
+                        <p>Use the sliders and dropdown to configure different network conditions. Start with default settings and gradually increase network load and packet loss to see how they affect call quality.</p>
+                    </div>
+                    
+                    <div class="instruction-card">
+                        <div class="instruction-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <h4>2. Start the Simulation</h4>
+                        <p>Click "Start Call Simulation" to begin the VoIP call. Watch the visual representation of packets flowing between the phones and server.</p>
+                    </div>
+                    
+                    <div class="instruction-card">
+                        <div class="instruction-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>3. Analyze Results</h4>
+                        <p>Review the call analysis metrics including MOS score, latency, jitter, and packet loss. Understand how each parameter affects overall call quality.</p>
+                    </div>
+                    
+                    <div class="instruction-card">
+                        <div class="instruction-icon">
+                            <i class="fas fa-repeat"></i>
+                        </div>
+                        <h4>4. Experiment & Learn</h4>
+                        <p>Try different combinations of settings to understand real-world scenarios. Compare excellent vs poor network conditions to see the impact on VoIP performance.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Why VoIP Simulator Section -->
+            <div class="why-simulator">
+                <h3>Why Understanding VoIP Network Conditions Matters</h3>
+                <div class="why-content">
+                    <div class="why-text">
+                        <p><strong>Real-World Application:</strong> In actual VoIP deployments, network conditions directly impact user experience. This simulator helps you understand the relationship between network parameters and call quality.</p>
+                        
+                        <p><strong>Quality of Service (QoS):</strong> VoIP is sensitive to network impairments. Understanding how latency, jitter, and packet loss affect call quality is crucial for designing reliable VoIP systems.</p>
+                        
+                        <p><strong>Troubleshooting Skills:</strong> When VoIP calls have issues, you need to identify whether the problem is network-related or application-related. This simulator builds your diagnostic skills.</p>
+                        
+                        <p><strong>Network Planning:</strong> Before deploying VoIP, you must ensure your network can handle the traffic. This tool helps you understand the requirements and plan accordingly.</p>
+                    </div>
+                    
+                    <div class="metrics-explanation">
+                        <h4>Key Metrics Explained:</h4>
+                        <ul>
+                            <li><strong>MOS Score (1-5):</strong> Mean Opinion Score - subjective quality rating. 4.0+ is excellent, 3.0-3.9 is good, below 3.0 indicates poor quality.</li>
+                            <li><strong>Latency (ms):</strong> Round-trip delay. Under 150ms is acceptable, over 300ms causes noticeable delays.</li>
+                            <li><strong>Jitter (ms):</strong> Variation in packet arrival times. Under 30ms is good, over 50ms causes audio distortion.</li>
+                            <li><strong>Packet Loss (%):</strong> Percentage of packets that don't arrive. Under 1% is acceptable, over 2% significantly degrades quality.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             
             <div class="simulator-container">
                 <div class="simulator-controls">
